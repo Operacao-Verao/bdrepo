@@ -89,6 +89,7 @@ create table Relatorio(
 	tipo_talude int not null,
 	vegetacao  int not null,
 	situacao_vitimas int not null, -- Desabrigados, desalojados
+	interdicao int not null,
 	danos_materiais boolean not null,
 	data_geracao date not null,
 	data_atendimento date not null
@@ -177,8 +178,7 @@ create table LocalAjuda(
 	cep char(8) not null,
 	foreign key (cep) references Endereco (cep),
 	tipo varchar (100),
-	conteudo varchar (355),
-	cep_endereco char (8)
+	conteudo varchar (355)
 );
 
 create table Pluviometro(
@@ -193,8 +193,8 @@ create table Fluviometro(
 	id int auto_increment primary key,
 	cep char (8),
 	foreign key (cep) references Endereco (cep),
-	latitude decimal (6,2),
-	longitude decimal (6,2)
+	latitude decimal (8,3),
+	longitude decimal (8,3)
 );
 
 create table AlertaChuva(
