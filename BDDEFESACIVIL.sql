@@ -7,7 +7,7 @@ create table Funcionario(
 	nome varchar (100) not null,
 	email varchar (100),
 	senha varchar (70) not null,
-	tipo_usuario varchar (100) not null
+	tipo_usuario int not null
 );
 
 create table Gestor(
