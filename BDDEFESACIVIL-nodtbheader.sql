@@ -1,7 +1,3 @@
-create database BDDEFESACIVIL;
-
-use BDDEFESACIVIL;
-
 create table Funcionario(
 	id int auto_increment  primary key, 
 	nome varchar (100) not null,
