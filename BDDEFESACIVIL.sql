@@ -10,6 +10,15 @@ create table Funcionario(
 	tipo_usuario int not null
 );
 
+create table Registro(
+	id int auto_increment primary key,
+	id_funcionario int not null,
+	foreign key (id_funcionario) references Funcionario (id),
+	acao int not null,
+	descricao varchar(127) not null,
+	momento datetime not null
+);
+
 create table Gestor(
 	id int auto_increment primary key,
 	id_funcionario int not null, 
@@ -75,7 +84,6 @@ create table Relatorio(
 	foreign key (id_ocorrencia) references Ocorrencia (id),
 	id_casa int,
 	foreign key (id_casa) references Casa (id),
-	enfermos int not null,
 	gravidade int not null,
 	relatorio varchar (355) not null,
 	encaminhamento varchar (155) not null,
@@ -210,7 +218,7 @@ create table NivelChuva(
 	id_pluviometro int,
 	foreign key (id_pluviometro) references Pluviometro (id),
 	chuva_em_mm decimal (5,2),
-	data_chuva date
+	data_chuva datetime
 );
 
 create table NivelRio(
@@ -218,7 +226,7 @@ create table NivelRio(
 	id_fluviometro int,
 	foreign key (id_fluviometro) references Fluviometro (id),
 	nivel_rio decimal (5,2),
-	data_diario date 
+	data_diario datetime
 );
 
 create table AlertaRio(
@@ -227,13 +235,4 @@ create table AlertaRio(
 	foreign key (id_fluviometro) references Fluviometro (id),
 	status_rio varchar (50),
 	data_alerta_rio datetime not null
-);
-
-create table Registro(
-	id int auto_increment primary key,
-	id_funcionario int not null,
-	foreign key (id_funcionario) references Funcionario (id),
-	acao int not null,
-	descricao varchar(127) not null,
-	momento datetime not null
 );
