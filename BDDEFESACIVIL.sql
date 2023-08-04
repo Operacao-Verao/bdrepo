@@ -1,6 +1,7 @@
-create database BDDEFESACIVIL;
+-- create database BDDEFESACIVIL;
 
-use BDDEFESACIVIL;
+-- use BDDEFESACIVIL;
+
 
 create table Funcionario(
 	id int auto_increment  primary key, 
