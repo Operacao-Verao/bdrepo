@@ -48,14 +48,14 @@ create table Endereco(
 
 create table Civil(
 	id int auto_increment primary key not null,
-	cep char(8) not null,
-	foreign key (cep) references Endereco (cep),
+	id_casa int null,
+	foreign key (id_casa) references Casa (id),
 	nome varchar (100) not null,
 	email varchar (70) unique,
 	senha varchar (70) not null,
 	cpf char (11) not null unique,
 	celular char (11) not null,
-	telefone char (10)
+	telefone char (10) null
 );
 
 create table Casa(
