@@ -68,7 +68,7 @@ create table Casa(
 
 create table Ocorrencia(
 	id int auto_increment primary key,
-	id_tecnico int not null,
+	id_tecnico int null,
 	foreign key (id_tecnico) references Tecnico (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
