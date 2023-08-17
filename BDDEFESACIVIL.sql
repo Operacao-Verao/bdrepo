@@ -1,6 +1,6 @@
--- create database BDDEFESACIVIL;
+create database BDDEFESACIVIL;
 
--- use BDDEFESACIVIL;
+use BDDEFESACIVIL;
 
 
 create table Funcionario(
@@ -46,6 +46,14 @@ create table Endereco(
 	cidade varchar (70)
 );
 
+create table Casa(
+	id int auto_increment primary key,
+	cep char (8) not null,
+	foreign key (cep) references Endereco (cep),
+	numero varchar (10),
+	complemento varchar (50)
+);
+
 create table Civil(
 	id int auto_increment primary key not null,
 	id_casa int null,
@@ -56,14 +64,6 @@ create table Civil(
 	cpf char (11) not null unique,
 	celular char (11) not null,
 	telefone char (10) null
-);
-
-create table Casa(
-	id int auto_increment primary key,
-	cep char (8) not null,
-	foreign key (cep) references Endereco (cep),
-	numero varchar (10),
-	complemento varchar (50)
 );
 
 create table Ocorrencia(
