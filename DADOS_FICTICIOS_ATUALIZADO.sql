@@ -1,32 +1,32 @@
 use BDDEFESACIVIL;
 insert into Funcionario (nome, email, senha, tipo_usuario) values
 						('João Porto', 'joao@google.com', '123456', 1),
-                        ('Gabriel Soares', 'gabrielsoares@google.com', '123456', 1),
-                        ('Cinthia Silva', 'cinthiasilva@gmail.com', '123456', 1),
-                        ('Malcolm Mello', 'malcolm@outlook.com', '123456', 1),
-                        ('Gustavo Ruiz', 'gustavo@google.com', '123456', 1),
-                        ('Erick Oliveira', 'erickoliveira@bol.com', '123456', 1),
-                        ('Samantha Silva', 'samantha@google.com', '123456', 2);	
+                        ('Gabriel Soares', 'gabrielsoares@google.com', '$2a$12$WXuPqbwwNvIOSm7Qng6fN.OMepGhWwZzhuWbEaCewn9aMreiIx18i', 1),
+                        ('Cinthia Silva', 'cinthiasilva@gmail.com', '$2a$12$ZbGmz9btwcNUV1eIaN3JJeLOD66.PC16u4N88g6X.sZBX0sVIlDYi', 1),
+                        ('Malcolm Mello', 'malcolm@outlook.com', '$2a$12$T.QUot.HLos49ESA32KQxeoyd1hMVgYGnLe.5DeZk89NN8b.78kYK', 1),
+                        ('Gustavo Ruiz', 'gustavo@google.com', '$2a$12$Dvrl5/fBrohTvMJPmnECnOP2DznnJ2lCuBsNspmS20LoEo.DK1/SC', 1),
+                        ('Erick Oliveira', 'erickoliveira@bol.com', '$2a$12$23PgaDiomT7sS3l3XKCAMu2WMJ/yZR2C6BT1cVNsl64LaWR7DZ/4q', 1),
+                        ('Samantha Silva', 'samantha@google.com', '$2a$12$MJ/BgCXe/u1Iykp2Ip12veGgPnfgca/qkyVoEktd51qWWisMLGFO6', 2);	
                         
 insert into Gestor(id_funcionario) values
 				  (7);
                   
-insert into Tecnico (id_funcionario) values
-					(2),
-                    (3),
-                    (5);  
+insert into Tecnico (id_funcionario, ativo) values
+					(2, true),
+                    (3, true),
+                    (5, true);  
                   
 insert into Endereco (cep, rua, bairro, cidade)values
 					 ('07851120','avenida sete de setembro', 'Centro', 'Franco da Rocha'),
 					 ('07851115','avenida Brasil Nº 300', 'Rute', 'São Paulo'),
-					 ('07985144 ','Rua Paulistana', 'Centro', 'Caieiras' );     
+					 ('07985144 ','Rua Paulistana', 'Centro', 'Caieiras');
+
+insert into Casa (cep, numero, complemento) values
+				 ('07985144', '300', 'Casa dos fundos');
                      
 insert into Civil (cep, nome, email, senha, cpf, celular, telefone) values
 				  ('07851120','Joana Maria', 'Joanajoaninha@gmail.com.br' ,'12345678','21345644452','11958526266','44448874'),
 				  ('07985144','Caroline Souza', 'carolinesouza.com.br' ,'12345678','33333344452','11958526341','44445566');   
-                  
-insert into Casa (cep, numero, complemento) values
-				 ('07985144', '300', 'Casa dos fundos');
                  
 insert into Ocorrencia (id_tecnico, id_civil, acionamento, relato_civil, num_casas, aprovado, data_ocorrencia) VALUES
 						(1,2, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1, '2018/09/02');                 
@@ -36,14 +36,10 @@ insert into Relatorio (id_ocorrencia, id_casa,  gravidade, relatorio,  encaminha
             values
             (1,1, 'leve','Foi encaminhado tecnico que fez a vistoria e declarou interdição do local','Encaminhado para a assistente social','Teste memorando',
             'Teste Oficio', 'Teste Processo', 'Teste assunto','Vistoriado Não houve mortes', 'Quintal', 'Alvenaria','Natural','Teste vegetação','2','2','1', '2018/09/02', '2018/09/09');
-           
-           
-            
+        
 INSERT INTO Foto (id_relatorio, codificado) values
 				 (1, 'Testando codificado');
-                 
-				
-                 
+                       
 insert into Afetados (id_relatorio, adultos, criancas, idosos, especiais, mortos, feridos, enfermos) values
 				     (1,2,4,0,0,0,0,0);
                      
@@ -99,43 +95,4 @@ insert into NivelRio (id_fluviometro, nivel_rio, data_diario)  values
 						('2', '6.8', '2023/10/12');   
                         
 insert into AlertaRio (id_fluviometro, status_rio, data_alerta_rio)  values
-						('2', 'Acima do normal', '2023/03/03');                           
-                        
-                        
-                      
-                        
-                        
-                        
-                       
-                 
-                 
-                        
-
-                      
-
-            
-            
-
-                     
-
-                 
-
-
-
-                  
-                  
-                  
-
-                 
-						
-                
-                
-                
-                
-                
-                
-                
-                
-                -- 99frelace
-                -- workana
-             
+						('2', 'Acima do normal', '2023/03/03');
