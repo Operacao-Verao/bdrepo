@@ -22,11 +22,16 @@ insert into Endereco (cep, rua, bairro, cidade)values
 					 ('07985144 ','Rua Paulistana', 'Centro', 'Caieiras');
 
 insert into Casa (cep, numero, complemento) values
-				 ('07985144', '300', 'Casa dos fundos');
+				 ('07985144', '300', 'Casa normal'),
+				 ('07851115', '200', 'Casa do lado'),
+				 ('07851120', '100', 'Casa da frente')
+				 ;
                      
-insert into Civil (cep, nome, email, senha, cpf, celular, telefone) values
-				  ('07851120','Joana Maria', 'Joanajoaninha@gmail.com.br' ,'12345678','21345644452','11958526266','44448874'),
-				  ('07985144','Caroline Souza', 'carolinesouza.com.br' ,'12345678','33333344452','11958526341','44445566');   
+insert into Civil (id_casa, nome, email, senha, cpf, celular, telefone) values
+				  (3,'Joana Maria', 'Joanajoaninha@gmail.com.br' ,'12345678','21345644452','11958526266','44448874'),
+				  (2,'Caroline Souza', 'carolinesouza.com.br' ,'12345678','33333344452','11958526341','44445566'),
+					(1,'Carlos dos Santos', 'carlos.com.br' ,'12345678','44444444452','11958728342','44445577')
+					;   
                  
 insert into Ocorrencia (id_tecnico, id_civil, acionamento, relato_civil, num_casas, aprovado, data_ocorrencia) VALUES
 						(1,2, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1, '2018/09/02');                 
@@ -34,8 +39,8 @@ insert into Ocorrencia (id_tecnico, id_civil, acionamento, relato_civil, num_cas
 insert into Relatorio (id_ocorrencia, id_casa,  gravidade, relatorio,  encaminhamento, memorando, oficio, processo, assunto, observacoes,
 			area_afetada, tipo_construcao, tipo_talude, Vegetacao, situacao_vitimas, interdicao, danos_materiais, data_geracao, data_atendimento) 
             values
-            (1,1, 'leve','Foi encaminhado tecnico que fez a vistoria e declarou interdição do local','Encaminhado para a assistente social','Teste memorando',
-            'Teste Oficio', 'Teste Processo', 'Teste assunto','Vistoriado Não houve mortes', 'Quintal', 'Alvenaria','Natural','Teste vegetação','2','2','1', '2018/09/02', '2018/09/09');
+            (1,1, 0,'Foi encaminhado tecnico que fez a vistoria e declarou interdição do local','Encaminhado para a assistente social','Teste memorando',
+            'Teste Oficio', 'Teste Processo', 'Teste assunto','Vistoriado Não houve mortes', 1, 1,1,1,2,2,1, '2018/09/02', '2018/09/09');
         
 INSERT INTO Foto (id_relatorio, codificado) values
 				 (1, 'Testando codificado');
@@ -79,7 +84,7 @@ insert into LocalAjuda(cep, tipo, conteudo) values
 					   ('07985144 ', 'Assistente Social', 'Pessoa perdeu tudo em um desastre natural'),
 					   ('07851115', 'Médico', 'Pessoa ferida');  
                        
-insert into pluviometro (cep, latitude, longitude)  values
+insert into Pluviometro (cep, latitude, longitude)  values
 						('07851115', '600.2', '8000.3');   
                         
 insert into Fluviometro (cep, latitude, longitude)  values

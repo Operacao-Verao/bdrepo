@@ -6,7 +6,7 @@ use BDDEFESACIVIL;
 create table Funcionario(
 	id int auto_increment primary key, 
 	nome varchar (100) not null,
-	email varchar (100),
+	email varchar (100) unique,
 	senha varchar (70) not null,
 	tipo_usuario int not null
 );
