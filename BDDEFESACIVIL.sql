@@ -73,19 +73,19 @@ create table Ocorrencia(
 	foreign key (id_tecnico) references Tecnico (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
+	id_casa int,
+	foreign key (id_casa) references Casa (id),
 	acionamento varchar (100) not null,
 	relato_civil varchar (355)  not null,
 	num_casas int not null,
-	aprovado boolean not null,
-	data_ocorrencia date not null
+	status int not null,
+	data_ocorrencia datetime not null
 );
 
 create table Relatorio(
 	id int auto_increment primary key,
 	id_ocorrencia int not null,
 	foreign key (id_ocorrencia) references Ocorrencia (id),
-	id_casa int,
-	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
 	relatorio varchar (355) not null,
 	encaminhamento varchar (155) not null,
@@ -101,8 +101,8 @@ create table Relatorio(
 	situacao_vitimas int not null, -- Desabrigados, desalojados
 	interdicao int not null,
 	danos_materiais boolean not null,
-	data_geracao date not null,
-	data_atendimento date not null
+	data_geracao datetime not null,
+	data_atendimento datetime not null
 );
 
 create table Foto(
@@ -178,7 +178,7 @@ create table Memo(
 	foreign key (id_relatorio) references Relatorio (id),
 	id_secretaria int not null,
 	foreign key (id_secretaria) references Secretaria (id),
-	data_memo date not null,
+	data_memo datetime not null,
 	status_memo varchar (355) not null,
 	processo char (10)
 );

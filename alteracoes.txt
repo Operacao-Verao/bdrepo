@@ -1,0 +1,3 @@
+- Todos os tipos "Date" viraram "Datetime"
+- Movido propriedade "id_casa" de "Relatorio" para "Ocorrencia"
+- Mudado propriedade "aprovado", virou "status" e ficou do tipo "int"
