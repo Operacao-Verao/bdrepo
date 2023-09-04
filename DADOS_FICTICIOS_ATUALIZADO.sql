@@ -33,8 +33,8 @@ insert into Civil (id_casa, nome, email, senha, cpf, celular, telefone) values
 					(1,'Carlos dos Santos', 'carlos.com.br' ,'12345678','44444444452','11958728342','44445577')
 					;   
                  
-insert into Ocorrencia (id_tecnico, id_civil, id_casa, acionamento, relato_civil, num_casas, aprovado, data_ocorrencia) VALUES
-						(1,2, 1, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1, '2018/09/02');                 
+insert into Ocorrencia (id_tecnico, id_civil, id_casa, acionamento, relato_civil, num_casas, aprovado, encerrado, data_ocorrencia) VALUES
+						(1,2, 1, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1,0, '2018/09/02');                 
                  
 insert into Relatorio (id_ocorrencia, gravidade, relatorio,  encaminhamento, memorando, oficio, processo, assunto, observacoes,
 			area_afetada, tipo_construcao, tipo_talude, Vegetacao, situacao_vitimas, interdicao, danos_materiais, data_geracao, data_atendimento) 

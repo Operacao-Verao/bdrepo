@@ -78,7 +78,8 @@ create table Ocorrencia(
 	acionamento varchar (100) not null,
 	relato_civil varchar (355)  not null,
 	num_casas int not null,
-	status int not null,
+	aprovado boolean not null,
+	encerrado boolean not null,
 	data_ocorrencia datetime not null
 );
 
