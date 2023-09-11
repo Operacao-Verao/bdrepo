@@ -1,3 +1,7 @@
 - Todos os tipos "Date" viraram "Datetime"
 - Movido propriedade "id_casa" de "Relatorio" para "Ocorrencia"
 - Acrescentado propriedade "encerrado" em Ocorrencia
+
+
+
+-- id_casa em "Relatório"

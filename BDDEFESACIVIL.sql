@@ -33,6 +33,15 @@ create table Tecnico(
 	ativo bool not null
 );
 
+create table ServiceWorkerData (
+	id int auto_increment primary key,
+	sw_endpoint varchar(250) not null,
+	auth varchar(40) not null,
+	p256dh varchar(110) not null,
+	id_gestor int not null,
+	foreign key (id_gestor) references Gestor (id)
+);
+
 create table Comunicado(
 	id int auto_increment primary key,
 	id_gestor int not null,
@@ -73,8 +82,6 @@ create table Ocorrencia(
 	foreign key (id_tecnico) references Tecnico (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
-	id_casa int,
-	foreign key (id_casa) references Casa (id),
 	acionamento varchar (100) not null,
 	relato_civil varchar (355)  not null,
 	num_casas int not null,
@@ -87,6 +94,8 @@ create table Relatorio(
 	id int auto_increment primary key,
 	id_ocorrencia int not null,
 	foreign key (id_ocorrencia) references Ocorrencia (id),
+	id_casa int not null unique,
+	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
 	relatorio varchar (355) not null,
 	encaminhamento varchar (155) not null,

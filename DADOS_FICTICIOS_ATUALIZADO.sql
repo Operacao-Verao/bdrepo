@@ -33,13 +33,13 @@ insert into Civil (id_casa, nome, email, senha, cpf, celular, telefone) values
 					(1,'Carlos dos Santos', 'carlos.com.br' ,'12345678','44444444452','11958728342','44445577')
 					;   
                  
-insert into Ocorrencia (id_tecnico, id_civil, id_casa, acionamento, relato_civil, num_casas, aprovado, encerrado, data_ocorrencia) VALUES
-						(1,2, 1, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1,0, '2018/09/02');                 
+insert into Ocorrencia (id_tecnico, id_civil, acionamento, relato_civil, num_casas, aprovado, encerrado, data_ocorrencia) VALUES
+						(1,2, 'Testando acionamento','Casa do vizinho está desbarrancando na minha piscina', 1,1,0, '2018/09/02');                 
                  
-insert into Relatorio (id_ocorrencia, gravidade, relatorio,  encaminhamento, memorando, oficio, processo, assunto, observacoes,
+insert into Relatorio (id_ocorrencia, id_casa, gravidade, relatorio,  encaminhamento, memorando, oficio, processo, assunto, observacoes,
 			area_afetada, tipo_construcao, tipo_talude, Vegetacao, situacao_vitimas, interdicao, danos_materiais, data_geracao, data_atendimento) 
             values
-            (1, 0,'Foi encaminhado tecnico que fez a vistoria e declarou interdição do local','Encaminhado para a assistente social','Teste memorando',
+            (1, 1, 0,'Foi encaminhado tecnico que fez a vistoria e declarou interdição do local','Encaminhado para a assistente social','Teste memorando',
             'Teste Oficio', 'Teste Processo', 'Teste assunto','Vistoriado Não houve mortes', 1, 1,1,1,2,2,1, '2018/09/02', '2018/09/09');
         
 INSERT INTO Foto (id_relatorio, codificado) values
@@ -97,7 +97,7 @@ insert into NivelChuva (id_pluviometro, chuva_em_mm, data_chuva)  values
 						('1', '6.5', '2023/05/02');   
                         
 insert into NivelRio (id_fluviometro, nivel_rio, data_diario)  values
-						('2', '6.8', '2023/10/12');   
+						('1', '6.8', '2023/10/12');   
                         
 insert into AlertaRio (id_fluviometro, status_rio, data_alerta_rio)  values
-						('2', 'Acima do normal', '2023/03/03');
+						('1', 'Acima do normal', '2023/03/03');
