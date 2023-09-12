@@ -56,11 +56,18 @@ create table Endereco(
 	cidade varchar (70)
 );
 
-create table Casa(
+create table Local(
 	id int auto_increment primary key,
 	cep char (8) not null,
 	foreign key (cep) references Endereco (cep),
-	numero varchar (10),
+	numero varchar (10)
+);
+
+create table Casa(
+	id int auto_increment primary key,
+	id_local int not null,
+	foreign key (id_local) references Local (id),
+	interdicao int not null,
 	complemento varchar (50)
 );
 
@@ -69,9 +76,9 @@ create table Civil(
 	id_casa int null,
 	foreign key (id_casa) references Casa (id),
 	nome varchar (100) not null,
-	email varchar (70) unique,
+	email varchar (70),
 	senha varchar (70) not null,
-	cpf char (11) not null unique,
+	cpf char (11),
 	celular char (11) not null,
 	telefone char (10) null
 );
@@ -109,7 +116,6 @@ create table Relatorio(
 	tipo_talude int not null,
 	vegetacao  int not null,
 	situacao_vitimas int not null, -- Desabrigados, desalojados
-	interdicao int not null,
 	danos_materiais boolean not null,
 	data_geracao datetime not null,
 	data_atendimento datetime not null
@@ -248,3 +254,4 @@ create table AlertaRio(
 	status_rio varchar (50),
 	data_alerta_rio datetime not null
 );
+

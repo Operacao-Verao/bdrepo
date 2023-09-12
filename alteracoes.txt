@@ -1,7 +1,6 @@
-- Todos os tipos "Date" viraram "Datetime"
-- Movido propriedade "id_casa" de "Relatorio" para "Ocorrencia"
-- Acrescentado propriedade "encerrado" em Ocorrencia
 
-
-
--- id_casa em "Relatório"
+Move propriedade IdCasa de "Ocorrencia" para "Relatorio"
+Adicionado Entidade "Local"
+"Local" recebe Cep e Numero de "Casa"
+"Casa" recebe Complemento
+Move propriedade Interdicao de "Relatorio" para "Casa"
