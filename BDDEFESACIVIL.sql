@@ -89,6 +89,8 @@ create table Ocorrencia(
 	foreign key (id_tecnico) references Tecnico (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
+	cep char(8) not null,
+	foreign key (cep) references Endereco (cep),
 	acionamento varchar (100) not null,
 	relato_civil varchar (355)  not null,
 	num_casas int not null,

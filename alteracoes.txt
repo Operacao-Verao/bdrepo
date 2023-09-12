@@ -4,3 +4,4 @@ Adicionado Entidade "Local"
 "Local" recebe Cep e Numero de "Casa"
 "Casa" recebe Complemento
 Move propriedade Interdicao de "Relatorio" para "Casa"
+Adicionado propriedade Cep em "Ocorrencia"
