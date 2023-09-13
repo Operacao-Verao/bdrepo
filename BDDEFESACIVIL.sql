@@ -56,7 +56,7 @@ create table Endereco(
 	cidade varchar (70)
 );
 
-create table Local(
+create table Residencial(
 	id int auto_increment primary key,
 	cep char (8) not null,
 	foreign key (cep) references Endereco (cep),
@@ -65,20 +65,20 @@ create table Local(
 
 create table Casa(
 	id int auto_increment primary key,
-	id_local int not null,
-	foreign key (id_local) references Local (id),
+	id_residencial int not null,
+	foreign key (id_residencial) references Residencial (id),
 	interdicao int not null,
 	complemento varchar (50)
 );
 
 create table Civil(
 	id int auto_increment primary key not null,
-	id_casa int null,
-	foreign key (id_casa) references Casa (id),
+	id_residencial int null,
+	foreign key (id_residencial) references Residencial (id),
 	nome varchar (100) not null,
 	email varchar (70),
 	senha varchar (70) not null,
-	cpf char (11),
+	cpf char (11) not null,
 	celular char (11) not null,
 	telefone char (10) null
 );
@@ -89,10 +89,10 @@ create table Ocorrencia(
 	foreign key (id_tecnico) references Tecnico (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
-	id_local int not null,
-	foreign key (id_local) references Local (id),
+	id_residencial int not null,
+	foreign key (id_residencial) references Residencial (id),
 	acionamento varchar (100) not null,
-	relato_civil varchar (355)  not null,
+	relato_civil varchar (1024) not null,
 	num_casas int not null,
 	aprovado boolean not null,
 	encerrado boolean not null,
@@ -106,13 +106,13 @@ create table Relatorio(
 	id_casa int not null unique,
 	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
-	relatorio varchar (355) not null,
+	relatorio varchar (1024) not null,
 	encaminhamento varchar (155) not null,
 	memorando varchar (100) not null,
 	oficio varchar (100) not null,
 	processo varchar (100) not null,
 	assunto varchar (200) not null,
-	observacoes varchar (355) not null,
+	observacoes varchar (1024) not null,
 	area_afetada int not null,
 	tipo_construcao int not null,
 	tipo_talude int not null,

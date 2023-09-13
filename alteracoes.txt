@@ -5,3 +5,8 @@ Adicionado Entidade "Local"
 "Casa" recebe Complemento
 Move propriedade Interdicao de "Relatorio" para "Casa"
 Adicionado propriedade Cep em "Ocorrencia"
+
+Alterado nome de "Local" para "Residencial" para evitar conflitos com palavras reservadas
+Cpf em "Civil" é obrigatório
+"Civil" referencia apenas "Local" agora
+Alterado limite de caracteres de RelatoCivil em "Ocorrencia" e Relatorio e Observacoes em "Relatorio" para 1024
