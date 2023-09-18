@@ -78,7 +78,7 @@ create table Civil(
 	nome varchar (100) not null,
 	email varchar (70),
 	senha varchar (70) not null,
-	cpf char (11) not null,
+	cpf char (11) not null unique,
 	celular char (11) not null,
 	telefone char (10) null
 );
