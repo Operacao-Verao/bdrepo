@@ -118,6 +118,7 @@ create table Relatorio(
 	tipo_talude int not null,
 	vegetacao  int not null,
 	situacao_vitimas int not null, -- Desabrigados, desalojados
+	interdicao int not null,
 	danos_materiais boolean not null,
 	data_geracao datetime not null,
 	data_atendimento datetime not null

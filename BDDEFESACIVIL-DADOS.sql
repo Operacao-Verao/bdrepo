@@ -71,8 +71,8 @@ INSERT INTO `ocorrencia` (`id`, `id_tecnico`, `id_civil`, `id_residencial`, `aci
 -- Despejando dados para a tabela `relatorio`
 --
 
-INSERT INTO `relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `encaminhamento`, `memorando`, `oficio`, `processo`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `data_geracao`, `data_atendimento`) VALUES
-(1, 1, 1, 1, 'E isso é tudo pessoal', 'nenhum', 'none', 'nope', 'nothing', 'nada', 'nill', 1, 2, 3, 4, 5, 0, '2023-09-18 19:15:15', '2023-09-18 19:15:15');
+INSERT INTO `relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `encaminhamento`, `memorando`, `oficio`, `processo`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `interdicao`, `data_geracao`, `data_atendimento`) VALUES
+(1, 1, 1, 1, 'E isso é tudo pessoal', 'nenhum', 'none', 'nope', 'nothing', 'nada', 'nill', 1, 2, 3, 4, 5, 0, 0, '2023-09-18 19:15:15', '2023-09-18 19:15:15');
 
 -- --------------------------------------------------------
 
