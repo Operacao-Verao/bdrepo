@@ -77,6 +77,15 @@ INSERT INTO `relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relator
 -- --------------------------------------------------------
 
 --
+-- Dumping data for table `dadosdavistoria`
+--
+
+INSERT INTO `dadosdavistoria` (`id`, `id_relatorio`, `desmoronamento`, `deslizamento`, `esgoto_escoamento`, `erosao`, `inundacao`, `incendio`, `arvores`, `infiltracao_trinca`, `judicial`, `monitoramento`, `transito`, `outros`) VALUES
+(1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 'Outrora');
+
+-- --------------------------------------------------------
+
+--
 -- Despejando dados para a tabela `afetados`
 --
 
@@ -129,3 +138,40 @@ INSERT INTO `secretaria` (`id`, `nome_secretaria`) VALUES
 INSERT INTO `secretario` (`id`, `id_secretaria`, `id_cargo`, `nome_secretario`) VALUES
 (1, 1, 1, 'José Bonifácio da Silva'),
 (2, 1, 2, 'Alice de Souza Conceição');
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `fluviometro`
+--
+
+INSERT INTO `fluviometro` (`id`, `cep`, `latitude`, `longitude`) VALUES
+(1, '10001000', 15.000, 19.000);
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `pluviometro`
+--
+
+INSERT INTO `pluviometro` (`id`, `cep`, `latitude`, `longitude`) VALUES
+(1, '10001000', 15.000, 17.000);
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `nivelrio`
+--
+
+INSERT INTO `nivelrio` (`id`, `id_fluviometro`, `nivel_rio`, `data_diario`) VALUES
+(1, 1, 5.12, '2023-10-05 08:04:09');
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `nivelchuva`
+--
+
+INSERT INTO `nivelchuva` (`id`, `id_pluviometro`, `chuva_em_mm`, `data_chuva`) VALUES
+(1, 1, 2.75, '2023-10-01 08:11:58');
+
