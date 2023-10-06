@@ -4,7 +4,7 @@
 --
 
 INSERT INTO `funcionario` (`id`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
-(1, 'Josué da SIlva Oliveira', 'josue@gmail.com', '$2y$12$/1bOReI0pXzhKs3SaKRV/OXUZ3KevOFVBfWxM/LELDeE0u3HN3jHG', 1),
+(1, 'Josué da Silva Oliveira', 'josue@gmail.com', '$2y$12$/1bOReI0pXzhKs3SaKRV/OXUZ3KevOFVBfWxM/LELDeE0u3HN3jHG', 1),
 (2, 'Marcos Antônio da Silva', 'tonincouveflor@gmail.com', '$2y$12$4MPS718.7TOMEq5X.K8NHOYXO7lL2lb9v17bHSx1FshIuGU0BuRJC', 1);
 
 -- --------------------------------------------------------
@@ -24,7 +24,7 @@ INSERT INTO `tecnico` (`id`, `id_funcionario`, `ativo`) VALUES
 --
 
 INSERT INTO `endereco` (`cep`, `rua`, `bairro`, `cidade`) VALUES
-('10001000', 'Avenida do Neymar', 'Vila dos Bestas', 'Caieiras');
+('10001000', 'Avenida do Neymar', 'Vila-sésamo', 'Caieiras');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,8 @@ INSERT INTO `civil` (`id`, `id_residencial`, `nome`, `email`, `senha`, `cpf`, `c
 --
 
 INSERT INTO `ocorrencia` (`id`, `id_tecnico`, `id_civil`, `id_residencial`, `acionamento`, `relato_civil`, `num_casas`, `aprovado`, `encerrado`, `data_ocorrencia`) VALUES
-(1, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57');
+(1, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57'),
+(2, 0, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
 
 -- --------------------------------------------------------
 
