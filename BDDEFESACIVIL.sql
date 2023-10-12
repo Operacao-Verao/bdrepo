@@ -16,7 +16,7 @@ create table Registro(
 	id_funcionario int not null,
 	foreign key (id_funcionario) references Funcionario (id),
 	acao int not null,
-	descricao varchar(127) not null,
+	descricao varchar(355) not null,
 	momento datetime not null
 );
 
@@ -92,7 +92,7 @@ create table Ocorrencia(
 	id_residencial int not null,
 	foreign key (id_residencial) references Residencial (id),
 	acionamento varchar (100) not null,
-	relato_civil varchar (1024) not null,
+	relato_civil varchar (2047) not null,
 	num_casas int not null,
 	aprovado boolean not null,
 	encerrado boolean not null,
@@ -106,13 +106,13 @@ create table Relatorio(
 	id_casa int not null unique,
 	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
-	relatorio varchar (1024) not null,
+	relatorio varchar (2047) not null,
 	encaminhamento varchar (155) not null,
 	memorando varchar (100) not null,
 	oficio varchar (100) not null,
 	processo varchar (100) not null,
 	assunto varchar (200) not null,
-	observacoes varchar (1024) not null,
+	observacoes varchar (2047) not null,
 	area_afetada int not null,
 	tipo_construcao int not null,
 	tipo_talude int not null,
@@ -199,6 +199,7 @@ create table Memo(
 	foreign key (id_secretaria) references Secretaria (id),
 	data_memo datetime not null,
 	status_memo varchar (355) not null,
+	setor varchar(75) not null,
 	processo char (10)
 );
 

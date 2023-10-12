@@ -4,8 +4,8 @@
 --
 
 INSERT INTO `funcionario` (`id`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
-(1, 'Josué da Silva Oliveira', 'josue@gmail.com', '$2y$12$/1bOReI0pXzhKs3SaKRV/OXUZ3KevOFVBfWxM/LELDeE0u3HN3jHG', 1),
-(2, 'Marcos Antônio da Silva', 'tonincouveflor@gmail.com', '$2y$12$4MPS718.7TOMEq5X.K8NHOYXO7lL2lb9v17bHSx1FshIuGU0BuRJC', 1);
+(1, 'Josué da Silva Oliveira', 'josue@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1),
+(2, 'Marcos Antônio da Silva', 'tonincouveflor@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1);
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ INSERT INTO `civil` (`id`, `id_residencial`, `nome`, `email`, `senha`, `cpf`, `c
 
 INSERT INTO `ocorrencia` (`id`, `id_tecnico`, `id_civil`, `id_residencial`, `acionamento`, `relato_civil`, `num_casas`, `aprovado`, `encerrado`, `data_ocorrencia`) VALUES
 (1, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57'),
-(2, 0, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
+(2, NULL, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,9 @@ INSERT INTO `cargo` (`id`, `nome_cargo`) VALUES
 --
 
 INSERT INTO `secretaria` (`id`, `nome_secretaria`) VALUES
-(1, 'Secretaria da Educação');
+(1, 'Educação'),
+(2, 'Esporte'),
+(3, 'Governamental');
 
 -- --------------------------------------------------------
 
@@ -139,6 +141,15 @@ INSERT INTO `secretaria` (`id`, `nome_secretaria`) VALUES
 INSERT INTO `secretario` (`id`, `id_secretaria`, `id_cargo`, `nome_secretario`) VALUES
 (1, 1, 1, 'José Bonifácio da Silva'),
 (2, 1, 2, 'Alice de Souza Conceição');
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `memo`
+--
+
+INSERT INTO `memo` (`id`, `id_relatorio`, `id_secretaria`, `data_memo`, `status_memo`, `setor`, `processo`) VALUES
+(1, 1, 1, '2023-10-12 06:03:53', 'Status 1', 'industrial', 'Primário');
 
 -- --------------------------------------------------------
 
