@@ -103,7 +103,7 @@ create table Relatorio(
 	id int auto_increment primary key,
 	id_ocorrencia int not null,
 	foreign key (id_ocorrencia) references Ocorrencia (id),
-	id_casa int not null unique,
+	id_casa int not null,
 	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
 	relatorio varchar (2047) not null,
