@@ -62,9 +62,9 @@ INSERT INTO `Civil` (`id`, `id_residencial`, `nome`, `email`, `senha`, `cpf`, `c
 -- Despejando dados para a tabela `ocorrencia`
 --
 
-INSERT INTO `Ocorrencia` (`id`, `id_tecnico`, `id_civil`, `id_residencial`, `acionamento`, `relato_civil`, `num_casas`, `aprovado`, `encerrado`, `data_ocorrencia`) VALUES
-(1, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57'),
-(2, NULL, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
+INSERT INTO `Ocorrencia` (`id`, `id_atendente`, `id_tecnico`, `id_civil`, `id_residencial`, `acionamento`, `relato_civil`, `num_casas`, `aprovado`, `encerrado`, `data_ocorrencia`) VALUES
+(1, NULL, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57'),
+(2, 1, NULL, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
 
 -- --------------------------------------------------------
 

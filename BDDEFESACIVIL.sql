@@ -87,6 +87,8 @@ create table Ocorrencia(
 	id int auto_increment primary key,
 	id_tecnico int null,
 	foreign key (id_tecnico) references Tecnico (id),
+	id_atendente int null,
+	foreign key (id_atendente) references Funcionario (id),
 	id_civil int not null,
 	foreign key (id_civil) references Civil (id),
 	id_residencial int not null,
