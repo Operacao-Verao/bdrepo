@@ -6,7 +6,7 @@ use BDDEFESACIVIL;
 create table Funcionario(
 	id int auto_increment primary key, 
 	nome varchar (100) not null,
-	email varchar (100) unique,
+	email varchar (100) unique not null,
 	senha varchar (70) not null,
 	tipo_usuario int not null
 );
@@ -60,7 +60,7 @@ create table Residencial(
 	id int auto_increment primary key,
 	cep char (8) not null,
 	foreign key (cep) references Endereco (cep),
-	numero varchar (10)
+	numero varchar (10) unique not null
 );
 
 create table Casa(
