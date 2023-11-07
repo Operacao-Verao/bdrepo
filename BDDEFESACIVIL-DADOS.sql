@@ -4,8 +4,8 @@
 --
 
 INSERT INTO `Funcionario` (`id`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
-(1, 'Josué da Silva Oliveira', 'josue@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1),
-(2, 'Marcos Antônio da Silva', 'tonincouveflor@gmail.com', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1);
+(1, 'Josué da Silva Oliveira', 'josue@gmail.com', '$2y$12$CKi/qWEwPmPZVFZeWTwAuujZ0utg7XTmWbUSuG7AE9pf2fyps7PTu', 0),
+(2, 'Marcos Antônio da Silva', 'tonin@gmail.com', '$2y$12$ZQqJ7VuiawlRIfP5j.8PAOJPwQpE3hYz4YCP7LfwOv7tLawAgaqJu', 1);
 
 -- --------------------------------------------------------
 
@@ -16,6 +16,15 @@ INSERT INTO `Funcionario` (`id`, `nome`, `email`, `senha`, `tipo_usuario`) VALUE
 INSERT INTO `Tecnico` (`id`, `id_funcionario`, `ativo`) VALUES
 (1, 1, 1),
 (2, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Despejando dados para a tabela `gestor`
+--
+
+INSERT INTO `Gestor` (`id`, `id_funcionario`) VALUES
+(1, 1);
 
 -- --------------------------------------------------------
 
@@ -51,7 +60,7 @@ INSERT INTO `Casa` (`id`, `id_residencial`, `interdicao`, `complemento`) VALUES
 --
 
 INSERT INTO `Civil` (`id`, `id_residencial`, `nome`, `email`, `senha`, `cpf`, `celular`, `telefone`) VALUES
-(1, NULL, 'Andressa da SIlva de Souza', 'andrelinda@hotmail.com', '$2y$12$FcOF/OtNszR79kikx8mCv.aEDz5MhFde6yHDdMOsBVmr95hLrAoWm', '94830574934', '11910001000', '1110001000'),
+(1, NULL, 'Andressa da Silva de Souza', 'andrelinda@hotmail.com', '$2y$12$FcOF/OtNszR79kikx8mCv.aEDz5MhFde6yHDdMOsBVmr95hLrAoWm', '94830574934', '11910001000', '1110001000'),
 (2, NULL, 'Márcia de Souza Gonçalves', 'donadosgatos@email.com', '$2y$12$A7ev0aMN52yw6vfgZrjUKuGPqMiJM2WxbTfS29xpTbPBl96c8uCym', '28495320185', '11920002000', '1120002000'),
 (3, NULL, 'Douglas de Souza Luiz Conceição', 'douglasluiz@gmail.com', '$2y$12$lMDfrQWLnSCGIhHGcFBXNOQNNB.DuarHbX/Z0vTUdDX6kC8BrOGYe', '29584376405', '11930003000', '1130003000'),
 (4, 1, 'Neymar Júnior', 'neymaroficialconfia@gmail.com', '$2y$12$wgdN7jNgJMRG8NNFCs9ki.SW.moxUBKyNpmRRrJvjbwBf.UmayIne', '75483957423', '11940004000', '1140004000');
