@@ -33,7 +33,8 @@ INSERT INTO `Gestor` (`id`, `id_funcionario`) VALUES
 --
 
 INSERT INTO `Endereco` (`cep`, `rua`, `bairro`, `cidade`) VALUES
-('10001000', 'Avenida do Neymar', 'Vila-sésamo', 'Caieiras');
+('07807430', 'Affonso Carlos Prado', 'Parque Monte Verde Novo', 'Franco da Rocha'),
+('07859340', 'Estrada do Governo, Km 42', 'Pouso Alegre', 'Franco da Rocha');
 
 -- --------------------------------------------------------
 
@@ -166,8 +167,8 @@ INSERT INTO `Memo` (`id`, `id_relatorio`, `id_secretaria`, `data_memo`, `status_
 -- Dumping data for table `fluviometro`
 --
 
-INSERT INTO `Fluviometro` (`id`, `cep`, `latitude`, `longitude`) VALUES
-(1, '10001000', 15.000, 19.000);
+INSERT INTO `Fluviometro` (`id`, `cep`, `auth_key`, `auth_token`, `latitude`, `longitude`) VALUES
+(1, '07859340', '71bff9bd7d44d5b48f201d6e0129035ebbb912127bc7d6361577c13f68147ad2', '71bff9bd7d44d5b48f201d6e0129035ebbb912127bc7d6361577c13f68147ad2', -23.334, -46.720);
 
 -- --------------------------------------------------------
 
@@ -175,8 +176,8 @@ INSERT INTO `Fluviometro` (`id`, `cep`, `latitude`, `longitude`) VALUES
 -- Dumping data for table `pluviometro`
 --
 
-INSERT INTO `Pluviometro` (`id`, `cep`, `latitude`, `longitude`) VALUES
-(1, '10001000', 15.000, 17.000);
+INSERT INTO `Pluviometro` (`id`, `cep`, `auth_key`, `auth_token`, `latitude`, `longitude`) VALUES
+(1, '07859340', '71bff9bd7d44d5b48f201d6e0129035ebbb912127bc7d6361577c13f68147ad2', '71bff9bd7d44d5b48f201d6e0129035ebbb912127bc7d6361577c13f68147ad2', -23.334, -46.720);
 
 -- --------------------------------------------------------
 

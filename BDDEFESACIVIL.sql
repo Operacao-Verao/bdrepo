@@ -217,6 +217,8 @@ create table Pluviometro(
 	id int auto_increment primary key,
 	cep char (8) not null,
 	foreign key (cep) references Endereco (cep),
+	auth_key varchar(64) not null,
+	auth_token varchar(64) not null,
 	latitude decimal (8,3) not null,
 	longitude decimal (8,3)
 );
@@ -225,6 +227,8 @@ create table Fluviometro(
 	id int auto_increment primary key,
 	cep char (8),
 	foreign key (cep) references Endereco (cep),
+	auth_key varchar(64) not null,
+	auth_token varchar(64) not null,
 	latitude decimal (8,3),
 	longitude decimal (8,3)
 );
