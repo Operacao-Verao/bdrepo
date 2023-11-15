@@ -30,7 +30,8 @@ create table Tecnico(
 	id int auto_increment primary key,
 	id_funcionario int not null unique, 
 	foreign Key (id_funcionario) references Funcionario (id),
-	ativo bool not null
+	ativo bool not null,
+	token varchar(255)
 );
 
 create table ServiceWorkerData (
