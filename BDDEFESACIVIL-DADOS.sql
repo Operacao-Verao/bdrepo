@@ -43,7 +43,7 @@ INSERT INTO `Endereco` (`cep`, `rua`, `bairro`, `cidade`) VALUES
 --
 
 INSERT INTO `Residencial` (`id`, `cep`, `numero`) VALUES
-(1, '10001000', '12');
+(1, '07807430', '12');
 
 -- --------------------------------------------------------
 
