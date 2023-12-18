@@ -73,8 +73,8 @@ INSERT INTO `Civil` (`id`, `id_residencial`, `nome`, `email`, `senha`, `cpf`, `c
 --
 
 INSERT INTO `Ocorrencia` (`id`, `id_atendente`, `id_tecnico`, `id_civil`, `id_residencial`, `acionamento`, `relato_civil`, `num_casas`, `aprovado`, `encerrado`, `data_ocorrencia`) VALUES
-(1, NULL, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, '2023-09-18 02:13:57'),
-(2, 1, NULL, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, '2023-09-18 02:13:57');
+(1, NULL, 1, 4, 1, 'telefone', 'Caiu um barranco aqui no meu quintal, me ajuda, minha casa é de madeira', 1, 1, 1, NOW()),
+(2, 1, NULL, 3, 1, 'telefone', 'Ta complicado meu amigo', 1, 0, 0, NOW());
 
 -- --------------------------------------------------------
 
@@ -82,8 +82,8 @@ INSERT INTO `Ocorrencia` (`id`, `id_atendente`, `id_tecnico`, `id_civil`, `id_re
 -- Despejando dados para a tabela `relatorio`
 --
 
-INSERT INTO `Relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `encaminhamento`, `memorando`, `oficio`, `processo`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `interdicao`, `data_geracao`, `data_atendimento`) VALUES
-(1, 1, 1, 1, 'E isso é tudo pessoal', 'nenhum', 'none', 'nope', 'nothing', 'nada', 'nill', 1, 2, 3, 4, 5, 0, 0, '2023-09-18 19:15:15', '2023-09-18 19:15:15');
+INSERT INTO `Relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `encaminhamento`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `interdicao`, `data_geracao`, `data_atendimento`, `assinatura_gestor`, `assinatura_tecnico`, `assinatura_civil`) VALUES
+(1, 1, 1, 1, 'E isso é tudo pessoal', 'nenhum', 'nada', 'nill', 1, 2, 3, 4, 5, 0, 0, NOW(), NOW(), '', '', '');
 
 -- --------------------------------------------------------
 
@@ -158,8 +158,8 @@ INSERT INTO `Secretario` (`id`, `id_secretaria`, `id_cargo`, `nome_secretario`) 
 -- Dumping data for table `memo`
 --
 
-INSERT INTO `Memo` (`id`, `id_relatorio`, `id_secretaria`, `data_memo`, `status_memo`, `setor`, `processo`) VALUES
-(1, 1, 1, '2023-10-12 06:03:53', 'Status 1', 'industrial', 'Primário');
+INSERT INTO `Memo` (`id`, `id_relatorio`, `id_secretaria`, `data_memo`, `status_memo`, `setor`, `memorando`, `oficio`, `processo`) VALUES
+(1, 1, 1, NOW(), 'Status 1', 'industrial', 'none', 'nope', 'Primário');
 
 -- --------------------------------------------------------
 
@@ -186,7 +186,7 @@ INSERT INTO `Pluviometro` (`id`, `cep`, `auth_key`, `auth_token`, `latitude`, `l
 --
 
 INSERT INTO `NivelRio` (`id`, `id_fluviometro`, `nivel_rio`, `data_diario`) VALUES
-(1, 1, 5.12, '2023-10-05 08:04:09');
+(1, 1, 5.12, NOW());
 
 -- --------------------------------------------------------
 
@@ -195,5 +195,5 @@ INSERT INTO `NivelRio` (`id`, `id_fluviometro`, `nivel_rio`, `data_diario`) VALU
 --
 
 INSERT INTO `NivelChuva` (`id`, `id_pluviometro`, `chuva_em_mm`, `data_chuva`) VALUES
-(1, 1, 2.75, '2023-10-01 08:11:58');
+(1, 1, 2.75, NOW());
 

@@ -1,2 +1,3 @@
 
-Inserido propriedade Interdicao em "Relatorio"
+- movido Memorando, Oficio, "Processo" e "Setor" de Relatorio para Memo
+- adicionado atributos AssinaturaTecnico, AssinaturaCivil e AssinaturaGestor em Relatorio

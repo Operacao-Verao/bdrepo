@@ -111,10 +111,7 @@ create table Relatorio(
 	gravidade int not null,
 	relatorio varchar (2047) not null,
 	encaminhamento varchar (155) not null,
-	memorando varchar (100) not null,
-	oficio varchar (100) not null,
-	processo varchar (100) not null,
-	assunto varchar (200) not null,
+	assunto varchar (2047) not null,
 	observacoes varchar (2047) not null,
 	area_afetada int not null,
 	tipo_construcao int not null,
@@ -124,7 +121,10 @@ create table Relatorio(
 	interdicao int not null,
 	danos_materiais boolean not null,
 	data_geracao datetime not null,
-	data_atendimento datetime not null
+	data_atendimento datetime not null,
+	assinatura_gestor text not null,
+	assinatura_tecnico text not null,
+	assinatura_civil text not null
 );
 
 create table Foto(
@@ -172,7 +172,7 @@ create table DadosDaVistoria(
 	judicial boolean,
 	monitoramento boolean,
 	transito boolean,
-	outros  varchar (355)
+	outros  varchar(355)
 );
 
 create table Secretaria(
@@ -203,7 +203,9 @@ create table Memo(
 	data_memo datetime not null,
 	status_memo varchar (355) not null,
 	setor varchar(75) not null,
-	processo char (10)
+	memorando varchar (355) not null,
+	oficio varchar (127) not null,
+	processo varchar (355) not null
 );
 
 create table LocalAjuda(
