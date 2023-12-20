@@ -196,7 +196,7 @@ create table Secretario(
 
 create table Memo(
 	id int auto_increment primary key,
-	id_relatorio int not null unique,
+	id_relatorio int not null,
 	foreign key (id_relatorio) references Relatorio (id),
 	id_secretaria int not null,
 	foreign key (id_secretaria) references Secretaria (id),
