@@ -122,7 +122,6 @@ create table Relatorio(
 	danos_materiais boolean not null,
 	data_geracao datetime not null,
 	data_atendimento datetime not null,
-	assinatura_gestor text not null,
 	assinatura_tecnico text not null,
 	assinatura_civil text not null
 );
