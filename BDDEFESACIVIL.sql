@@ -110,7 +110,6 @@ create table Relatorio(
 	foreign key (id_casa) references Casa (id),
 	gravidade int not null,
 	relatorio varchar (2047) not null,
-	encaminhamento varchar (155),
 	assunto varchar (2047) not null,
 	observacoes varchar (2047) not null,
 	area_afetada int not null,
