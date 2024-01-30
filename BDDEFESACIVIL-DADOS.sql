@@ -82,8 +82,8 @@ INSERT INTO `Ocorrencia` (`id`, `id_atendente`, `id_tecnico`, `id_civil`, `id_re
 -- Despejando dados para a tabela `relatorio`
 --
 
-INSERT INTO `Relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `encaminhamento`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `interdicao`, `data_geracao`, `data_atendimento`, `assinatura_gestor`, `assinatura_tecnico`, `assinatura_civil`) VALUES
-(1, 1, 1, 1, 'E isso é tudo pessoal', 'nenhum', 'nada', 'nill', 1, 2, 3, 4, 5, 0, 0, NOW(), NOW(), '', '', '');
+INSERT INTO `Relatorio` (`id`, `id_ocorrencia`, `id_casa`, `gravidade`, `relatorio`, `assunto`, `observacoes`, `area_afetada`, `tipo_construcao`, `tipo_talude`, `vegetacao`, `situacao_vitimas`, `danos_materiais`, `interdicao`, `data_geracao`, `data_atendimento`, `assinatura_tecnico`, `assinatura_civil`) VALUES
+(1, 1, 1, 1, 'E isso é tudo pessoal', 'nada', 'nill', 1, 2, 3, 4, 5, 0, 0, NOW(), NOW(), '', '');
 
 -- --------------------------------------------------------
 
